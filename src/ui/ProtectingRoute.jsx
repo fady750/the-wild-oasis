@@ -18,7 +18,6 @@ function ProtectingRoute({children}) {
     // 1 first we need to get data from back end to know if user authenticated or not
     const { isLoading, isAuthenticated} = useUser();
     const navigate = useNavigate();
-
     // 2 if not authenticated and isLoading true navigate to login page 
     useEffect(function(){
         if(!isAuthenticated && !isLoading)
